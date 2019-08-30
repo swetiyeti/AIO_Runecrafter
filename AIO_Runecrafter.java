@@ -16,7 +16,7 @@ import java.awt.*;
 @ScriptMeta(name = "Sweti's AIO Runecrafter",  desc = "Makes free to play runes", developer = "Sweti Yeti", category = ScriptCategory.RUNECRAFTING)
 public class AIO_Runecrafter extends TaskScript implements RenderListener {
 
-    private static final Task[] TASKS = {new Traverse(), new Banking(), new EnterRuins(), new CraftRunes(), new LeaveRuins(), new equipInventory()};
+    private static final Task[] TASKS = {new Traverse(), new Banking(), new EnterRuins(), new CraftRunes(), new LeaveRuins(), new EquipInventory()};
     public static StopWatch timer;
 
     public static RuneType runeType;

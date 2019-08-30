@@ -18,7 +18,8 @@ public class EnterRuins extends Task {
     @Override
     public int execute() {
         Log.info("Entering Ruins");
-        SceneObject Ruins = SceneObjects.getNearest("Mysterious ruins"); //ID for Mysterious-ruins
+        SceneObject Ruins = SceneObjects.getNearest("Mysterious ruins");
+        //null check for ruins
         if (Ruins != null){
             Ruins.interact("Enter");
         }

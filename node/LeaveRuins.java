@@ -24,7 +24,8 @@ public class LeaveRuins extends Task{
             Dialog.processContinue();
         }
         Log.info("Leaving Ruins");
-        SceneObject Portal = SceneObjects.getNearest("Portal"); //ID for Portal
+        SceneObject Portal = SceneObjects.getNearest("Portal");
+        //null check for portal
         if (Portal != null) {
             Time.sleepUntil(()-> Portal.interact("Use"), 200);
         }

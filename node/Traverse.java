@@ -19,26 +19,27 @@ public class Traverse extends Task {
         if (Movement.getRunEnergy() > 45 && !Movement.isRunEnabled()) {
             Movement.toggleRun(!Movement.isRunEnabled());
         }
+
         Movement.walkTo(traverseToBank() ? AIO_Runecrafter.runeType.getBankArea().getCenter() : AIO_Runecrafter.runeType.getRuinsRunArea().getCenter() );
+
         return 1450;
     }
 
 
-    private boolean MadeRunes() {
+    private boolean madeRunes() {
         return Inventory.contains(AIO_Runecrafter.runeType.getRuneID()); //selected rune ID
     }
 
-    private boolean InvRight(){
+    private boolean invRight(){
         return Inventory.contains(AIO_Runecrafter.essenceType.getEssenceID()); //include tally in future?
     }
 
-    //improve this
     private boolean traverseToAltar() {
-        return InvRight() && !MadeRunes() && !AIO_Runecrafter.runeType.getRuinsArea().contains(Players.getLocal()) && !AIO_Runecrafter.runeType.getAltarArea().contains(Players.getLocal());
+        return invRight() && !madeRunes() && !AIO_Runecrafter.runeType.getRuinsArea().contains(Players.getLocal()) && !AIO_Runecrafter.runeType.getAltarArea().contains(Players.getLocal());
     }
 
     private boolean traverseToBank() {
-        return (!InvRight() || MadeRunes()) && !AIO_Runecrafter.runeType.getBankArea().contains(Players.getLocal()) && !AIO_Runecrafter.runeType.getAltarArea().contains(Players.getLocal());
+        return (!invRight() || madeRunes()) && !AIO_Runecrafter.runeType.getBankArea().contains(Players.getLocal()) && !AIO_Runecrafter.runeType.getAltarArea().contains(Players.getLocal());
     }
 
 }
