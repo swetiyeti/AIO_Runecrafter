@@ -4,7 +4,6 @@ import AIO_Runecrafter.data.EssenceType;
 import AIO_Runecrafter.data.RuneType;
 import AIO_Runecrafter.node.*;
 import org.rspeer.runetek.api.commons.StopWatch;
-import org.rspeer.runetek.api.movement.position.Area;
 import org.rspeer.runetek.event.listeners.RenderListener;
 import org.rspeer.runetek.event.types.RenderEvent;
 import org.rspeer.script.ScriptCategory;
